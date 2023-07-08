@@ -1,0 +1,219 @@
+/*B**************************** Help ****************************B*/
+/* ctn = flex container */
+/*E**************************** Help ****************************E*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans&display=swap');
+
+/*B**************************** Shared ****************************B*/
+:root{
+--font-WorkSans:'Work Sans', sans-serif;
+--font-CrimsonText:'Crimson Text', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;    
+}
+.green{
+    color: #74C69D;
+}
+.white{
+    color: #FFF;
+}
+.black{
+    color: #000; 
+}
+.black75{
+    color: rgba(33, 37, 41, 0.75);
+}
+.white75{
+    color: rgba(255, 255, 255, 0.75);
+}
+.bgwhite{
+    background-color: #FFF;
+}
+.bgblack{
+    background-color:#212529;
+}
+.h3{    
+    font-size: 16px;    
+    font-family: --font-WorkSans;
+    font-weight: 700;    
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 30px;  
+}
+.h4{    
+    font-size: 32px;
+    font-family: --font-CrimsonText;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;  
+}
+.h5{
+    width: inherit;
+    font-size: 24px;
+    font-family: --font-CrimsonText;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 20px;    
+    text-align: left;
+}
+.h6{
+    width: inherit;
+    font-size: 16px;    
+    font-family: --font-WorkSans;
+    font-weight: 700;        
+    text-transform: uppercase;
+    margin-top: 20px; 
+}
+.h2{
+    font-size: 24px;
+    font-family: --font-WorkSans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    text-align: center;
+    margin-top: 15px;    
+}
+.p{    
+    font-size: 15px;
+    font-family: --font-WorkSans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    margin-top: 15px;    
+}
+.button{
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding:10px;
+    width: 150px;           
+    font-size: 20px;    
+    font-family: --font-WorkSans;
+    font-style: normal;
+    font-weight: 400;        
+    border-radius: 5px;    
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ctn-row{
+    display: flex;
+    flex-direction: row;
+}
+.ctn{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    justify-content: center;
+    align-items: center;  
+}
+.box-shadow{
+    box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 20px 40px;
+    width: 170px;
+    margin-top: 20px;    
+}
+/*E**************************** Shared ****************************E*/
+/*B**************************** Header ****************************B*/
+.header{
+    background-color: #74C69D;
+    padding: 20px;
+}
+/*B****************** Navigation ******************B*/
+.nav-ctn{
+    display: flex;
+    justify-content: space-between;    
+    padding-right: 10vw;    
+    padding-left: 10vw;  
+}
+.nav-ctn .logo{
+    width: 120px;
+    height: auto;
+}
+.nav-ctn .link{
+    display: none;
+    color: #FFF;
+    font-size: 20px;  
+    font-family: var(--font-WorkSans);
+    text-decoration: none;
+    padding-right: 15px;    
+}
+.nav-ctn .hamburger{
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+}
+
+#hamburger .mobile{    
+    display: block;
+    color: #FFF;
+    font-size: 20px;
+    font-family: var(--font-WorkSans);
+    text-decoration: none;    
+    margin-bottom: 10px;    
+}
+.navbar-mobile:hover{
+    background-color: #3f8d66;
+}    
+.navbar-mobile:active{
+    background-color: #3f8d66;
+}    
+#hamburger{
+    display: none;
+    text-align: center;    
+}
+/*E****************** Navigation ******************E*/
+/*E**************************** Header ****************************E*/
+/*B****************************  Main  ****************************B*/
+.main{
+    padding: 20px;
+}
+main figure img{
+    margin-top: 40px;
+}
+/*E****************************  Main  ****************************E*/
+/*B**************************** Footer ****************************B*/
+.footer{
+    background-color: #74C69D;
+    padding: 20px;
+}
+footer img{
+    margin-left: 18px;
+}
+/*E**************************** Footer ****************************E*/
+/*B**************************** media  ****************************B*/
+@media screen and (min-width: 1000px) {
+    .hamburger{
+        display: none;
+    }
+    .nav-ctn .link{
+        display: inline;
+    }
+    .header .ctn{
+        flex-direction: row-reverse;
+        margin-left: 10vw;        
+        margin-right: 10vw;   
+    }
+    #partner-logo,#footer{
+        flex-direction: row;
+        justify-content: space-evenly;        
+    }
+    #mid,#talents{
+        margin-top: 50px;
+        flex-direction: row;
+        margin-left: 10vw;        
+        margin-right: 10vw;        
+    }
+    #bot{
+        margin-top: 50px;
+        flex-direction: row-reverse;
+        margin-left: 10vw;        
+        margin-right: 10vw; 
+    }
+}
+/*E**************************** media  ****************************E*/

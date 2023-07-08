@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, Responsive">
+    <meta name="description" content="Responsive Startup Website">
+    <meta name="author" content="Ahmad Mokhtari">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Startup Website</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/icon-logo.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/javascript.js"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="nav-ctn">
+            <section>
+                <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
+            </section>
+            <section>
+                <img class="hamburger" src="assets/img/NavbarDropDownIcon.svg"
+                    onclick="hamburger()" alt="NavbarDropDownIcon">
+                <a class="link" href="#">Home</a>
+                <a class="link" href="#">Portfolio</a>
+                <a class="link" href="#">Services</a>
+                <a class="link" href="#">Contact</a>
+            </section>
+        </nav>
+        <!-- Mobile Navigation -->
+        <section id="hamburger">
+            <a class="mobile" href="#">Home</a>
+            <a class="mobile" href="#">Portfolio</a>
+            <a class="mobile" href="#">Services</a>
+            <a class="mobile" href="#">Contact</a>
+        </section>
+        <!-- hero -->
+        <article class="ctn">
+            <img src="assets/img/PhotoHero.svg" alt="hero-photo">
+            <section>
+                <h3 class="h3 white">welcome</h3>
+                <h4 class="h4 white">Lorem ipsum dolor sit amet consectetur</h4>
+                <p  class="p  white75">Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis 
+                    cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+                <a class="button black bgwhite">Explore</a>
+            </section>            
+        </article>
+    </header>
+    <main class="main">
+        <article class="ctn center">
+            <h3 class="h3 green">partners</h3>
+            <h4 class="h4 black">Lorem Ipsum Dolor</h4>
+            <h2 class="h2 black">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        </article>
+        <figure id="partner-logo" class="ctn center">
+            <img src="assets/img/LogoGoogle.svg"    alt="LogoGoogle">
+            <img src="assets/img/LogoMicrosoft.svg" alt="LogoMicrosoft">
+            <img src="assets/img/Logoairbnb.svg"    alt="Logoairbnb">
+            <img src="assets/img/Logofacebook.svg"  alt="Logofacebook">
+            <img src="assets/img/Logospotify.svg"   alt="Logospotify">
+        </figure>
+        <section class="ctn center">
+            <a class="button white bgblack" href="#">Learn More</a>
+        </section>
+        <article id="mid" class="ctn">            
+            <img src="assets/img/PhotoMiddle.svg" alt="PhotoMiddle">
+            <section>
+                <h4 class="h4 black">Lorem ipsum dolor sit amet consectetur</h4>
+                <p  class="p  black75">Lorem ipsum, dolor sit amet consectetur 
+                                                adipisicing elit. Suscipit nemo hic quos, ab,
+                                                dolor aperiam nobis cum est eos error ipsum, 
+                                                voluptate culpa nesciunt delectus iste?</p>
+                <a class="button white bgblack" href="#">Learn More</a>
+            </section>
+        </article>
+        <article id="bot" class="ctn">
+            <img class="down-photo" src="assets/img/PhotoBotton.svg" alt="PhotoBotton">
+            <section>
+                <h4 class="h4 black">Lorem ipsum dolor sit amet consectetur</h4>
+                <p  class="p black75">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error 
+                                    ipsum, voluptate culpa nesciunt delectus iste?</p>
+                <a  class="button white bgblack" href="#">Learn More</a>
+            </section>
+        </article>
+        <article class="ctn center">
+            <h3 class="h3 green">team</h3>
+            <h4 class="h4 black">Our Talents</h4>
+            <h2 class="h2 black">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
+        </article>
+        <section id="talents" class="ctn center">
+            <section class="ctn center box-shadow">
+                <img src="assets/img/TalentPeg.svg" alt="TalentPeg">
+                <h5 class="h5 black">Peg Legge</h5>
+                <h6 class="h6 black75">CEO</h6>
+            </section>
+            <section class="ctn center box-shadow">
+                <img src="assets/img/TalentRichard.svg" alt="TalentRichard">
+                <h5 class="h5 black">Richard Guerra</h5>
+                <h6 class="h6 black75">CTO</h6>
+            </section>
+            <section class="ctn center box-shadow">
+                <img src="assets/img/TalentAlexandra.svg" alt="TalentAlexandra">
+                <h5 class="h5 black">Alexandra Stolz</h5>
+                <h6 class="h6 black75">DESIGNER</h6>
+            </section>
+            <section class="ctn center box-shadow">
+                <img src="assets/img/TalentJanet.svg" alt="TalentJanet">
+                <h5 class="h5 black">Janet Bray</h5>
+                <h6 class="h6 black75">DEVELOPER</h6>
+            </section>            
+        </section>
+        <section class="ctn center">
+            <a class="button white bgblack" href="#">View Team</a>
+        </section>
+    </main>
+    <footer class="footer">
+        <section id="footer" class="ctn center">
+            <figure class="ctn-row center">
+                <img src="assets/img/IconFacebook.svg"  alt="IconFacebook">
+                <img src="assets/img/IconInstagram.svg" alt="IconInstagram">
+                <img src="assets/img/IconTwitter.svg"   alt="IconTwitter">
+                <img src="assets/img/IconPinterest.svg" alt="IconPinterest">
+                <img src="assets/img/IconTikTak.svg"    alt="IconTikTak">
+                <img src="assets/img/IconWhatsApp.svg"  alt="IconWhatsApp">
+                <img src="assets/img/IconYoutube.svg"   alt="IconYoutube">
+            </figure>
+            <h2 class="h2 white">© Start, 2022. All rights reserved.</h2>  
+        </section>
+    </footer>    
+</body>
+</html>
