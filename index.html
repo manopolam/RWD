@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, Responsive">
     <meta name="description" content="Responsive Startup Website">
     <meta name="author" content="Ahmad Mokhtari">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icon-logo.ico" type="image/x-icon">  
     <title>Responsive Startup Website</title>    
-    <link rel="shortcut icon" href="assets/img/icon-logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans&display=swap">
+    <link rel="stylesheet" href="assets/css/style.css">    
 </head>
 <body>
     <header class="header">
@@ -21,16 +24,16 @@
             <section>
                 <img class="hamburger" src="assets/img/NavbarDropDownIcon.svg"
                     onclick="hamburger()" alt="NavbarDropDownIcon">
-                <a class="link" href="#">Home</a>
-                <a id ="angryBtn" class="link" href="#" onclick="destroy()">Destroy</a>
-                <a class="link" href="#">Services</a>
-                <a class="link" href="Exam.html">Exam</a>
+                <a class="link"  href="#">Home</a>
+                <a id="angryBtn1" class="link" href="#" onclick="destroy()">Destroy</a>
+                <a class="link"  href="#">Services</a>
+                <a class="link"  href="Exam.html">Exam</a>
             </section>
         </nav>
         <!-- Mobile Navigation -->
         <section id="hamburger">
             <a class="mobile" href="#">Home</a>
-            <a id ="angryBtn" class="mobile" href="#" onclick="destroy()">Destroy</a>
+            <a id="angryBtn2"  class="mobile" href="#" onclick="destroy()">Destroy</a>
             <a class="mobile" href="#">Services</a>
             <a class="mobile" href="Exam.html">Exam</a>
         </section>
@@ -38,7 +41,7 @@
         <article class="ctn">
             <img src="assets/img/PhotoHero.svg" alt="hero-photo">
             <section id="destroySection">
-                <h3 class="h3 white">welcome</h3>
+                <h3 id="destroyText" class="h3 white">welcome</h3>
                 <h4 class="h4 white">Lorem ipsum dolor sit amet consectetur</h4>
                 <p  class="p  white75">Lorem ipsum, dolor sit amet consectetur
                     adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis 
