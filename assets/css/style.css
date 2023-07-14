@@ -141,6 +141,9 @@
     text-decoration: none;
     padding-right: 15px;    
 }
+.nav-ctn .link:hover{
+    font-weight:600;    
+}
 .nav-ctn .hamburger{
     width: 35px;
     height: auto;
@@ -155,12 +158,10 @@
     text-decoration: none;    
     margin-bottom: 10px;    
 }
-.navbar-mobile:hover{
+#hamburger .mobile:hover{    
     background-color: #3f8d66;
-}    
-.navbar-mobile:active{
-    background-color: #3f8d66;
-}    
+}
+
 #hamburger{
     display: none;
     text-align: center;    
