@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Responsive">
+    <meta name="description" content="Responsive Startup Website">
+    <meta name="author" content="Ahmad Mokhtari">
+    <link rel="shortcut icon" href="/assets/img/icon-logo.ico" type="image/x-icon">  
+    <title>Question</title>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/question.js"></script>    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/question.css">    
+</head>
+<body onload="load()">
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="nav-ctn">
+            <section>
+                <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
+            </section>
+            <section>
+                <img class="hamburger" src="assets/img/NavbarDropDownIcon.svg"
+                    onclick="hamburger()" alt="NavbarDropDownIcon">
+                <a class="link" href="index.html">Home</a>                
+                <a style="color:black;" class="link" href="question.html">Question</a>
+                <a class="link" href="Board.html">Board</a>
+            </section>
+        </nav>
+        <!-- Mobile Navigation -->
+        <section id="hamburger">
+            <a class="mobile" href="index.html">Home</a>            
+            <a style="color:black;" class="mobile" href="question.html">Question</a>
+            <a class="mobile" href="Board.html">Board</a>
+        </section>
+    </header>
+    <main>        
+        <section class="container">            
+            <!-- faq question -->
+            <h1 class="question">Difference Between <span>=</span>
+                    , <span>==</span> and <span>===</span> in JavaScript?</h1>
+            
+            <!-- faq answer -->                
+            <p class="answer">
+                    Equal (<span>=</span>) in JavaScript is used for assigning values to a variable.<br>
+                    It is called as assignment operator.<br>
+                    It does not return true or false.
+                    <br>
+                    Double equals (<span>==</span>) in JavaScript is used for comparing two variables,
+                    but it ignores the datatype of variable.<br>
+                    It is called as comparison operator.<br>
+                    Return true if the two operands are equal.<br>
+                    It will return false if the two operands are not equal.<br>
+                    Triple equals (<span>===</span>) is used for comparing two variables,
+                    but this operator also checks datatype and compares two values.<br>
+                    It is also called as comparison operator.<br>
+                    It returns true only if both values and data types are the same for the two variables.<br>
+            </p>            
+            <hr class="hr-line">
+            <!-- faq question -->
+            <h1 class="question"><span>Objects</span> vs. <span>Arrays</span> ?</h1>
+            
+            <!-- faq answer -->                
+            <p class="answer">                    
+                    an <span>object</span> as a cabinet with signed files. Every piece of data is stored in its file by the key.<br>
+                    It is easy to find a file by its name or add/remove a file.<br>
+                    But quite often we find that we need an ordered collection,
+                    where we have a 1st, a 2nd, a 3rd element and so on.
+                    It is not convenient to use an object here, because it provides 
+                    no methods to manage the order of elements. We can not insert a new property “between” the existing ones.
+                    There exists a special data structure named <span>Array</span>, to store ordered collections.
+
+            </p>            
+            <hr class="hr-line">                        
+        </section>
+    </main>
+</body>
+</html>
