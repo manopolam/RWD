@@ -37,10 +37,11 @@
     </header>
     <main>        
         <section class="container">            
+            <!------------------------------ Question1 --------------------------------------------------------->
             <!-- faq question -->
-            <h1 class="question">Difference Between <span>=</span>
-                    , <span>==</span> and <span>===</span> in JavaScript?</h1>
-            
+            <h1 class="question">
+                Difference Between <span>=</span>, <span>==</span> and <span>===</span> in JavaScript?
+            </h1>            
             <!-- faq answer -->                
             <p class="answer">
                     Equal (<span>=</span>) in JavaScript is used for assigning values to a variable.<br>
@@ -58,9 +59,10 @@
                     It returns true only if both values and data types are the same for the two variables.<br>
             </p>            
             <hr class="hr-line">
+            <!------------------------------ Question2 --------------------------------------------------------->
             <!-- faq question -->
-            <h1 class="question"><span>Objects</span> vs. <span>Arrays</span> ?</h1>
-            
+            <h1 class="question">
+                <span>Objects</span> vs. <span>Arrays</span> ?</h1>            
             <!-- faq answer -->                
             <p class="answer">                    
                     an <span>object</span> as a cabinet with signed files. Every piece of data is stored in its file by the key.<br>
@@ -70,9 +72,108 @@
                     It is not convenient to use an object here, because it provides 
                     no methods to manage the order of elements. We can not insert a new property “between” the existing ones.
                     There exists a special data structure named <span>Array</span>, to store ordered collections.
-
             </p>            
             <hr class="hr-line">                        
+            <!------------------------------ Question3 --------------------------------------------------------->
+            <!-- faq question -->
+            <h1 class="question">
+                <span>Statically</span> vs. <span>dynamically</span> typed languages ?
+            </h1>            
+            <!-- faq answer -->                
+            <p class="answer">
+                <span>Statically</span>-typed programming languages (<i>C,C++,...</i>) do type checking 
+                (i.e., the process of verifying and enforcing the constraints of types on values)
+                at <strong>compile-time</strong>, whereas dynamically-typed languages do type checks at <strong>runtime</strong>. 
+                <br><br>
+                <img style="background-color: beige;"src="assets/img/StaticallyvsDynamically.webp" alt="StaticallyvsDynamically">
+                <br><br>
+                Weakly</strong>-typed languages (<i>JavaScript,...</i>) make conversions between unrelated types implicitly; whereas,
+                <strong>strongly</strong>-typed languages (<i>Python,...</i>) do not allow implicit conversions between unrelated types.
+            </p>            
+            <hr class="hr-line">                        
+            <!------------------------------ Question4 --------------------------------------------------------->
+            <!-- faq question -->
+            <h1 class="question">
+                What does <span>JavaScript</span> do at web browser?
+            </h1>            
+            <!-- faq answer -->                
+            <p class="answer">
+                Before of JavaScript, the web was purely <i>static</i>.
+                JavaScript enables web pages to have complex content that may react,
+                and change dynamically without refresh all the page.                
+            </p>            
+            <hr class="hr-line">
+            <!------------------------------ Question5 --------------------------------------------------------->
+            <!-- faq question -->
+            <h1 class="question">
+                <span>Statement</span> vs <span>Expression</span> ?
+            </h1>            
+            <!-- faq answer -->                
+            <p class="answer">
+                An <span>expression</span> is any word or group of words or symbols that is a <strong>value</strong>. 
+                In programming, an <span>expression</span> is a <strong>value</strong>, or anything that executes 
+                and ends up being a <strong>value</strong>.<br>
+                A <span>statement</span> is a group of expressions and/or statements that you design to carry out a
+                task or an action.<br>
+                <span>statement</span> are two-sided. they either do tasks or don't do them.<br> 
+                Any statement that can return a value is automatically qualified to be used as an expression.
+                That is why a function or class is a statement and also an expression in JavaScript.<br>
+                Expressions can be assigned or used as operands, while statements can only be declared.<br>
+                Statements create side effects to be useful, while expressions are values or execute to values<br>
+                example of statement:<br><br>
+                
+                function add(){<br>
+                do something;<br>
+                return something;<br>
+                }<br><br>
+                
+                and we call it as a statement<br><br>
+                add() <br><br>
+                example of expression:<br><br>
+                let out = add();<br><br>   
+                
+            </p>            
+            <hr class="hr-line">
+            <!------------------------------ Question6 --------------------------------------------------------->
+            <!-- faq question -->
+            <h1 class="question">
+                JavaScript <span>Variables</span> Identifiers ?
+            </h1>            
+            <!-- faq answer -->                
+            <p class="answer">
+                The general rules for constructing names for variables (unique identifiers) are:<br>
+                Names can contain letters, digits, underscores, and dollar signs.<br>
+                Names must begin with a letter.<br>
+                Names can also begin with $ and _ (it is not very common).<br>
+                Names are case sensitive (y and Y are different variables).<br>
+                Reserved words (like JavaScript keywords) cannot be used as names.<br>
+                professional programmers often use JavaScript Dollar Sign ($) 
+                as an alias for the main function in a JavaScript library and 
+                use JavaScript Underscore (_) as an alias for "private (hidden)" variables.             
+            </p>            
+            <hr class="hr-line">
+            <!------------------------------ Question7 --------------------------------------------------------->  
+            <!-- faq question -->
+            <h1 class="question">
+                What are the types of functions in JavaScript and why and when do we use functions?
+            </h1>            
+            <!-- faq answer -->                
+            <p class="answer">
+                1. Named Functions: These are functions that are declared with a specific name 
+                and can be executed by calling their name.<br>
+                2. Anonymous Functions: These functions do not have a specific name and are 
+                usually assigned to a variable or passed as arguments to other functions.<br>
+                3. Arrow Functions: Introduced in ES6, arrow functions provide a concise
+                syntax for writing anonymous functions.<br><br>
+                functions are commonly used in JavaScript for :<br><br>
+                1. Code Reusability : define once and reuse it multiple times<br>        
+                2. Abstraction : Functions can abstract complex logic and provide a simplified interface<br>         
+                3. Modularity : Breaking down code into smaller to making it easier to maintain, test, and debug.<br>
+                4. Encapsulation : preventing conflicts with other parts of the code<br>
+                5. Event Handling : used to handle events triggered by user interactions<br>
+                6. Callbacks and Asynchronous Operations<br>           
+            </p>            
+            <hr class="hr-line">               
         </section>
     </main>
 </body>
