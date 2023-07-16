@@ -26,15 +26,19 @@ body{
     background-position: center;
 }
 .question{
+    font-size: 32px;
     padding: 20px;
     color: var(--white);
     font-family: var(--font);
+    line-height: 1.6;
 }
 .answer{  
-    padding: 20px;
+    padding: 15px;
     color: var(--blue);
     font-family: var(--font);
     white-space: pre-wrap; /*  for go to new line when we use \n at text */
+    line-height: 1.6;
+    font-size: 18px;
 }
 .btnAnswer{    
     color:var(--blue);
@@ -56,7 +60,7 @@ body{
     border: 1px solid var(--gray);
 }
 .bigTitle{
-    font-size: x-large;
+    font-size: 42px;
     font-weight: 400;
 }
 /*B**************************** media  ****************************B*/
