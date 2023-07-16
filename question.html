@@ -11,7 +11,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/question.js"></script>    
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/question.css">    
+    <link rel="stylesheet" href="assets/css/question.css">      
 </head>
 <body onload="load()">
     <header class="header">
@@ -25,24 +25,35 @@
                     onclick="hamburger()" alt="NavbarDropDownIcon">
                 <a class="link" href="index.html">Home</a>                
                 <a style="color:black;" class="link" href="question.html">Question</a>
-                <a class="link" href="Board.html">Board</a>
+                <a class="link" href="board.html">Board</a>
             </section>
         </nav>
         <!-- Mobile Navigation -->
         <section id="hamburger">
             <a class="mobile" href="index.html">Home</a>            
             <a style="color:black;" class="mobile" href="question.html">Question</a>
-            <a class="mobile" href="Board.html">Board</a>
+            <a class="mobile" href="board.html">Board</a>
         </section>
     </header>
     <main>        
         <section class="container">            
+            <!------------------------------ Exercise1 --------------------------------------------------------->
+            <section class="Exercise1">
+                <input id="inpAge" name="inpAge" placeholder="20">
+                <label for="inpAge">لطفا سن خودتان را بفرمایید؟</label>
+                <br><br><br>
+                <a class="btnAnswer" onclick="bookChosen()">کتاب مناسب</a>
+                <br><br>
+                <p id="bookChosen"></p>
+                <br><br>
+            </section>            
+
             <!------------------------------ Question1 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 Difference Between <span>=</span>, <span>==</span> and <span>===</span> in JavaScript?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
                     Equal (<span>=</span>) in JavaScript is used for assigning values to a variable.<br>
                     It is called as assignment operator.<br>
@@ -60,10 +71,10 @@
             </p>            
             <hr class="hr-line">
             <!------------------------------ Question2 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 <span>Objects</span> vs. <span>Arrays</span> ?</h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">                    
                     an <span>object</span> as a cabinet with signed files. Every piece of data is stored in its file by the key.<br>
                     It is easy to find a file by its name or add/remove a file.<br>
@@ -75,11 +86,11 @@
             </p>            
             <hr class="hr-line">                        
             <!------------------------------ Question3 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 <span>Statically</span> vs. <span>dynamically</span> typed languages ?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
                 <span>Statically</span>-typed programming languages (<i>C,C++,...</i>) do type checking 
                 (i.e., the process of verifying and enforcing the constraints of types on values)
@@ -92,11 +103,11 @@
             </p>            
             <hr class="hr-line">                        
             <!------------------------------ Question4 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 What does <span>JavaScript</span> do at web browser?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
                 Before of JavaScript, the web was purely <i>static</i>.
                 JavaScript enables web pages to have complex content that may react,
@@ -104,18 +115,18 @@
             </p>            
             <hr class="hr-line">
             <!------------------------------ Question5 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 <span>Statement</span> vs <span>Expression</span> ?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
-                An <span>expression</span> is any word or group of words or symbols that is a <strong>value</strong>. 
-                In programming, an <span>expression</span> is a <strong>value</strong>, or anything that executes 
+                An <strong>expression</strong> is any word or group of words or symbols that is a <strong>value</strong>. 
+                In programming, an <strong>expression</strong> is a <strong>value</strong>, or anything that executes 
                 and ends up being a <strong>value</strong>.<br>
-                A <span>statement</span> is a group of expressions and/or statements that you design to carry out a
+                A <strong>statement</strong> is a group of expressions and/or statements that you design to carry out a
                 task or an action.<br>
-                <span>statement</span> are two-sided. they either do tasks or don't do them.<br> 
+                <strong>statement</strong> are two-sided. they either do tasks or don't do them.<br> 
                 Any statement that can return a value is automatically qualified to be used as an expression.
                 That is why a function or class is a statement and also an expression in JavaScript.<br>
                 Expressions can be assigned or used as operands, while statements can only be declared.<br>
@@ -127,19 +138,17 @@
                 return something;<br>
                 }<br><br>
                 
-                and we call it as a statement<br><br>
-                add() <br><br>
-                example of expression:<br><br>
-                let out = add();<br><br>   
+                and we call it as a statement====>  add(); <br>
+                example of expression====>   let out = add();  
                 
             </p>            
             <hr class="hr-line">
             <!------------------------------ Question6 --------------------------------------------------------->
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
                 JavaScript <span>Variables</span> Identifiers ?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
                 The general rules for constructing names for variables (unique identifiers) are:<br>
                 Names can contain letters, digits, underscores, and dollar signs.<br>
@@ -153,25 +162,63 @@
             </p>            
             <hr class="hr-line">
             <!------------------------------ Question7 --------------------------------------------------------->  
-            <!-- faq question -->
+            <!-- Question -->
             <h1 class="question">
-                What are the types of functions in JavaScript and why and when do we use functions?
+                What are the types of <span>functions</span> in JavaScript and why and when do we use functions?
             </h1>            
-            <!-- faq answer -->                
+            <!-- Answer -->                
             <p class="answer">
                 1. Named Functions: These are functions that are declared with a specific name 
                 and can be executed by calling their name.<br>
                 2. Anonymous Functions: These functions do not have a specific name and are 
                 usually assigned to a variable or passed as arguments to other functions.<br>
                 3. Arrow Functions: Introduced in ES6, arrow functions provide a concise
-                syntax for writing anonymous functions.<br><br>
-                functions are commonly used in JavaScript for :<br><br>
+                syntax for writing anonymous functions.<br>
+                functions are commonly used in JavaScript for :<br>
                 1. Code Reusability : define once and reuse it multiple times<br>        
                 2. Abstraction : Functions can abstract complex logic and provide a simplified interface<br>         
                 3. Modularity : Breaking down code into smaller to making it easier to maintain, test, and debug.<br>
                 4. Encapsulation : preventing conflicts with other parts of the code<br>
                 5. Event Handling : used to handle events triggered by user interactions<br>
                 6. Callbacks and Asynchronous Operations<br>           
+            </p>            
+            <hr class="hr-line">               
+            <!------------------------------ Question8 --------------------------------------------------------->  
+            <!-- Question -->
+            <h1 class="question">
+                Interpreter Vs Compiler?
+            </h1>            
+            <!-- Answer -->                
+            <p class="answer">
+                Programming languages like JavaScript, Python, Ruby use interpreters.<br>
+                Programming languages like C, C++, Java use compilers.<br>                
+                1-<strong>Execution Process</strong> : An interpreter reads the source code line 
+                by line and executes it immediately. A compiler, on the other hand, 
+                translates the entire source code into machine code or bytecode before execution.<br>
+                2-<strong>Translation</strong> : Interpreters do not translate the entire source 
+                code into machine code. They interpret and execute each line or instruction of 
+                the source code individually. Compilers translate the entire source code into 
+                machine code or bytecode before execution, enabling faster execution once 
+                the translation is complete.<br>
+                3-<strong>Efficiency</strong> : Interpreted programs tend to be slower 
+                than compiled programs because they are executed directly, 
+                without the performance optimizations that the compilation process provides.
+                Compiled programs, once translated, are generally faster and more efficient.<br>
+                4-<strong>Error Detection</strong> :  Interpreters detect errors on a 
+                line-by-line basis. When an error is encountered, the execution of the
+                program may halt, preventing further execution. In contrast, compilers 
+                detect errors during the compilation phase and provide a list of all 
+                errors and warnings before the program is executed.<br>
+                5-<strong>Portability</strong> :  Interpreted programs are generally more 
+                portable, as the interpreter can be run on different systems, provided the
+                interpreter is available. Compiled programs are system-dependent, as 
+                the compiled output is specific to the target system.<br>
+                6-<strong>Debugging</strong> :  Interpreters typically offer more 
+                interactive and immediate debugging capabilities, allowing developers 
+                to step through the code and inspect variables during runtime. 
+                Debugging compiled programs often involves using separate debugging 
+                tools, which may be less immediate and require additional setup.<br>
+
             </p>            
             <hr class="hr-line">               
         </section>

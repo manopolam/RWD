@@ -17,3 +17,18 @@ function load(){
         });
     }
 }
+function bookChosen(){
+    let age = document.getElementById("inpAge");
+    age = age.value;
+    let bkChosen = document.getElementById("bookChosen");        
+    if(Number(age)){
+        age < 10 ? bkChosen.textContent="کتاب شنگول و منگول":
+            age >= 10 && age < 20  ? bkChosen.textContent="چه کسی پنیر مرا دزدید":
+                age >= 20 && age < 30  ? bkChosen.textContent="باشگاه 5 صبحی ها ":
+                    age >= 30 && age < 80  ? bkChosen.textContent="معجزه سپاسگزاری":
+                        bkChosen.textContent="کتابی مناسب شما نمی باشد";
+    }
+    else{
+        bkChosen.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+    }
+}

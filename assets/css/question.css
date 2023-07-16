@@ -1,6 +1,10 @@
 body{
     background-color:#3b3b3b ;   
     color: #aca7a7; 
+    /* background-image: url(../img/banner.jpg); */
+    background-position: center;
+    background-size:cover;    
+    background-repeat: no-repeat;    
 }
 .container{
     display: flex;
@@ -27,7 +31,8 @@ span{
     color:rgba(230, 180, 18, 0.836);
 }
 .answer{
-    font-size: 28px;    
+    font-size: 28px; 
+    line-height: 1.6;   
     margin: auto;        
     width: 50%;     
     padding: 18px;    
@@ -50,4 +55,50 @@ span{
 .active:after {
     content: "\2796";    
     /* Unicode character for "minus" sign (-) */
+}
+.Exercise1{
+    width: 60%;
+    margin: auto;
+    text-align: right;
+    border: 1px solid black;
+    box-sizing: border-box;
+    box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin-top: 20px;
+}
+input{
+    font-family: tahoma; 
+    width: 3%;
+    text-align: right;    
+    padding: 5px;    
+}
+label{
+    font-family: tahoma; 
+}
+.btnAnswer{    
+    font-family: tahoma;
+    color:#8ab4f8;
+    text-decoration: none;
+    border: 1px solid #8ab4f8;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.btnAnswer:active{
+    color:#e8eaed;
+    background-color: #8ab4f8;
+}
+.btnAnswer:hover{
+    color:#e8eaed;
+    border: 1px solid #9aa0a6;
+}
+#bookChosen{
+    font-family: tahoma;
+    color:rgb(223, 201, 10);
+    font-size: 24px;
+    padding-right: 10px;
+    
 }
