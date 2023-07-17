@@ -1,3 +1,4 @@
+"use strict";
 let destroy_chk = 0;
 let destroy_text = true; 
 let elem;
