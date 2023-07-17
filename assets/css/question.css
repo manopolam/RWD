@@ -15,7 +15,6 @@ body{
     width: 60%;
     margin: auto;  
 }
-/* Style the buttons that are used to open and close the question body */
 .question {    
     letter-spacing: 2px;
     font-size: 28px;
@@ -74,6 +73,7 @@ input{
 }
 label{
     font-family: tahoma; 
+    font-size: 20px;
 }
 .btnAnswer{    
     font-family: tahoma;
@@ -93,7 +93,7 @@ label{
 }
 .btnAnswer:hover{
     color:#e8eaed;
-    border: 1px solid #9aa0a6;
+    border: 1px solid #9aa0a6;    
 }
 #bookChosen{
     font-family: tahoma;
@@ -101,4 +101,23 @@ label{
     font-size: 24px;
     padding-right: 10px;
     
+}
+
+@media screen and (max-width:1000px) {
+    input{             
+        width: 8%;                
+    }
+    .question,.answer,label{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width:420px) {
+    input{             
+        width: 8%;                
+    }    
+    .question,.answer,label{
+        font-size: 12px;
+    }    
 }
