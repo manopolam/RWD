@@ -20,13 +20,18 @@ function load(){
 function bookChosen(){
     let age = document.getElementById("inpAge");
     age = age.value;
-    let bkChosen = document.getElementById("bookChosen");        
+    let bkChosen = document.getElementById("bookChosen");
+    let bkTxt ;
+    let isRange = true;        
     if(Number(age)){
-        age < 10 ? bkChosen.textContent="کتاب شنگول و منگول":
-            age >= 10 && age < 20  ? bkChosen.textContent="چه کسی پنیر مرا دزدید":
-                age >= 20 && age < 30  ? bkChosen.textContent="باشگاه 5 صبحی ها ":
-                    age >= 30 && age < 80  ? bkChosen.textContent="معجزه سپاسگزاری":
-                        bkChosen.textContent="کتابی مناسب شما نمی باشد";
+        age < 10 ? bkTxt="شنگول و منگول":
+            age >= 10 && age < 20  ? bkTxt="چه کسی پنیر مرا دزدید":
+                age >= 20 && age < 30  ? bkTxt="باشگاه 5 صبحی ها ":
+                    age >= 30 && age < 80  ? bkTxt="معجزه سپاسگزاری":
+                        isRange=false;
+
+        (isRange) ? bkChosen.textContent="کتاب ( " + bkTxt + " ) مناسب شما می باشد" :
+                    bkChosen.textContent="کتاب مناسبی برای شما در دسترس نمی باشد";
     }
     else{
         bkChosen.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
