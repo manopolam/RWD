@@ -107,7 +107,7 @@ label{
     input{             
         width: 8%;                
     }
-    .question,.answer,label{
+    .question,.answer,label,#bookChosen{
         font-size: 16px;
     }
     
@@ -117,7 +117,7 @@ label{
     input{             
         width: 8%;                
     }    
-    .question,.answer,label{
+    .question,.answer,label,#bookChosen{
         font-size: 12px;
     }    
 }
