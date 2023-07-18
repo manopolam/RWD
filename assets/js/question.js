@@ -16,7 +16,96 @@ function load(){
         });
     }
 }
-function bookSelect(){
+function bookSelect_Switch(){
+    const ageInput = document.getElementById("ageInput");    
+    const age = ageInput.value;
+    const bookPrompt = document.getElementById("bookPrompt");
+    let bookName ;
+    let isRange = true;
+
+    if(+(age)){
+        switch(age){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:            
+                bookName="شنگول و منگول";
+                break;
+            case 10:
+            case 11:
+            case 19:
+                bookName="چه کسی پنیر مرا دزدید";
+                break;
+            case 20:
+            case 29:
+                bookName="باشگاه 5 صبح ";
+                break;
+            case 30:
+            case 79:
+                bookName="معجزه سپاسگزاری";
+                break;
+            default:
+                isRange=false;
+        }
+        
+        if(isRange){
+            ageInput.value="";
+            bookPrompt.textContent=`برای  ${age} ` +
+            `سال، کتاب " ${bookName} " مناسب می باشد` ;
+        }
+        else{
+            bookPrompt.textContent="کتاب مناسب سن شما، یافت نشد";
+        }        
+    }
+    else{
+        ageInput.value="";
+        bookPrompt.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+    }
+}
+
+function bookSelect_IfElse(){
+    const ageInput = document.getElementById("ageInput");    
+    const age = ageInput.value;
+    const bookPrompt = document.getElementById("bookPrompt");
+    let bookName ;
+    let isRange = true;    
+    if(+(age)){
+        if(age < 10){
+            bookName="شنگول و منگول";
+        }
+        else if(age >= 10 && age < 20){
+            bookName="چه کسی پنیر مرا دزدید";
+        }
+        else if(age >= 20 && age < 30){
+            bookName="باشگاه 5 صبح ";
+        }
+        else if(age >= 30 && age < 80){
+            bookName="معجزه سپاسگزاری";
+        }
+        else{
+            isRange=false;
+        }
+        if(isRange){
+            ageInput.value="";
+            bookPrompt.textContent=`برای  ${age} ` +
+            `سال، کتاب " ${bookName} " مناسب می باشد` ;
+        }
+        else{
+            bookPrompt.textContent="کتاب مناسب سن شما، یافت نشد";
+        }        
+    }
+    else{
+        ageInput.value="";
+        bookPrompt.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+    }
+}
+
+function bookSelect_ternary(){
     const ageInput = document.getElementById("ageInput");    
     const age = ageInput.value;
     const bookPrompt = document.getElementById("bookPrompt");
@@ -25,7 +114,7 @@ function bookSelect(){
     if(+(age)){
         age < 10 ? bookName="شنگول و منگول":
             age >= 10 && age < 20  ? bookName="چه کسی پنیر مرا دزدید":
-                age >= 20 && age < 30  ? bookName="باشگاه 5 صبحی ها ":
+                age >= 20 && age < 30  ? bookName="باشگاه 5 صبح ":
                     age >= 30 && age < 80  ? bookName="معجزه سپاسگزاری":
                         isRange=false;
 
