@@ -38,13 +38,23 @@
     <main>        
         <section class="container">            
             <!------------------------------ Exercise1 --------------------------------------------------------->
-            <section class="Exercise">
+            <section class="exercise persian">
                 <input id="ageInput" name="ageInput">
                 <label for="ageInput">لطفا سن خودتان را بفرمایید؟</label>
                 <br><br><br>
-                <a class="btnAnswer" onclick="bookSelect_IfElse()">انتخاب کتاب</a>
+                <a class="btnAnswer tahoma" onclick="bookSelect_IfElse()">انتخاب کتاب</a>
+                <br><br><br>
+                <p id="bookPrompt" class="prompt tahoma"></p>
+                <br>
+            </section>            
+            <!------------------------------ Exercise2 --------------------------------------------------------->
+            <section class="exercise">
+                <h1>Print odd numbers up to 100, excluding the user-entered odd number.</h1>
+                <input class="input" id="userInput" placeholder="Please choose an odd number?">                
+                <br><br><br>
+                <a class="btnAnswer" onclick="displayOddNumbers()">Show the result</a>
                 <br><br>
-                <p id="bookPrompt"></p>
+                <p id="oddRange" class="prompt"></p>
                 <br><br>
             </section>            
 

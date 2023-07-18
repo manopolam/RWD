@@ -51,15 +51,25 @@ span{
     content: "\2796";    
     /* Unicode character for "minus" sign (-) */
 }
-.Exercise{
+.persian{    
+    text-align: right;    
+}
+.exercise{
     width: 60%;
-    margin: auto;
-    text-align: right;
+    margin: auto;    
     border: 1px solid black;
     box-sizing: border-box;
     box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    margin-top: 20px;
+    padding: 30px 20px;    
+    margin-top: 50px;    
+    transition: 0.4s;
+}
+h1{
+    letter-spacing: 2px;
+    font-size: 28px;    
+    padding: 30px 20px;        
+    transition: 0.4s;
+    margin: auto;
 }
 input{
     font-family: tahoma; 
@@ -67,12 +77,21 @@ input{
     text-align: right;    
     padding: 5px;    
 }
+.input{
+    margin-left: 20px;
+    padding: 10px 20px;  
+    text-align: left;  
+    width: 30%;      
+}
 label{
     font-family: tahoma; 
     font-size: 20px;
 }
-.btnAnswer{    
+.tahoma{
     font-family: tahoma;
+}
+.btnAnswer{        
+    margin-left: 20px;
     color:#8ab4f8;
     text-decoration: none;
     border: 1px solid #8ab4f8;
@@ -91,19 +110,17 @@ label{
     color:#e8eaed;
     border: 1px solid #9aa0a6;    
 }
-#bookPrompt{
-    font-family: tahoma;
+.prompt{    
     color:rgb(223, 201, 10);
     font-size: 24px;
-    padding-right: 10px;
-    
+    padding-right: 10px;    
 }
 
 @media screen and (max-width:1000px) {
     input{             
         width: 8%;                
     }
-    .question,.answer,label,#bookPrompt{
+    .question,.answer,label,.prompt{
         font-size: 16px;
     }
     
@@ -113,7 +130,7 @@ label{
     input{             
         width: 8%;                
     }    
-    .question,.answer,label,#bookPrompt{
+    .question,.answer,label,.prompt{
         font-size: 12px;
     }    
 }

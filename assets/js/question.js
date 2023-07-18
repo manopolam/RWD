@@ -16,6 +16,8 @@ function load(){
         });
     }
 }
+
+// ------------------------------ Exercise1 --------------------------------------
 function bookSelect_Switch(){
     const ageInput = document.getElementById("ageInput");    
     const age = ageInput.value;
@@ -123,5 +125,26 @@ function bookSelect_ternary(){
     }
     else{
         bookPrompt.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+    }
+}
+// ------------------------------ Exercise2 --------------------------------------
+const userInput = document.getElementById("userInput");
+const oddRange  = document.getElementById("oddRange");
+
+function isOdd(n){
+    return((n%2)==1)
+}
+
+function displayOddNumbers(){
+    while (!isOdd(userInput.value)){
+        oddRange.textContent = "You Must enter odd number, Please try again";
+        userInput.value = "" ;
+    }
+    for(let i=1;i<100;i++){
+        if(isOdd(i)){
+            if(userInput.value != i){
+                oddRange.textContent += i + " - ";
+            }
+        }
     }
 }
