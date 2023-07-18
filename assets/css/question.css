@@ -1,10 +1,6 @@
 body{
     background-color:#3b3b3b ;   
-    color: #aca7a7; 
-    /* background-image: url(../img/banner.jpg); */
-    background-position: center;
-    background-size:cover;    
-    background-repeat: no-repeat;    
+    color: #aca7a7;   
 }
 .container{
     display: flex;
@@ -55,7 +51,7 @@ span{
     content: "\2796";    
     /* Unicode character for "minus" sign (-) */
 }
-.Exercise1{
+.Exercise{
     width: 60%;
     margin: auto;
     text-align: right;
@@ -95,7 +91,7 @@ label{
     color:#e8eaed;
     border: 1px solid #9aa0a6;    
 }
-#bookChosen{
+#bookPrompt{
     font-family: tahoma;
     color:rgb(223, 201, 10);
     font-size: 24px;
@@ -107,7 +103,7 @@ label{
     input{             
         width: 8%;                
     }
-    .question,.answer,label,#bookChosen{
+    .question,.answer,label,#bookPrompt{
         font-size: 16px;
     }
     
@@ -117,7 +113,7 @@ label{
     input{             
         width: 8%;                
     }    
-    .question,.answer,label,#bookChosen{
+    .question,.answer,label,#bookPrompt{
         font-size: 12px;
     }    
 }

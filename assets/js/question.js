@@ -16,23 +16,23 @@ function load(){
         });
     }
 }
-function bookChosen(){
-    let age = document.getElementById("inpAge");
-    age = age.value;
-    let bkChosen = document.getElementById("bookChosen");
-    let bkTxt ;
-    let isRange = true;        
-    if(Number(age)){
-        age < 10 ? bkTxt="شنگول و منگول":
-            age >= 10 && age < 20  ? bkTxt="چه کسی پنیر مرا دزدید":
-                age >= 20 && age < 30  ? bkTxt="باشگاه 5 صبحی ها ":
-                    age >= 30 && age < 80  ? bkTxt="معجزه سپاسگزاری":
+function bookSelect(){
+    const ageInput = document.getElementById("ageInput");    
+    const age = ageInput.value;
+    const bookPrompt = document.getElementById("bookPrompt");
+    let bookName ;
+    let isRange = true;    
+    if(+(age)){
+        age < 10 ? bookName="شنگول و منگول":
+            age >= 10 && age < 20  ? bookName="چه کسی پنیر مرا دزدید":
+                age >= 20 && age < 30  ? bookName="باشگاه 5 صبحی ها ":
+                    age >= 30 && age < 80  ? bookName="معجزه سپاسگزاری":
                         isRange=false;
 
-        (isRange) ? bkChosen.textContent="کتاب ( " + bkTxt + " ) مناسب شما می باشد" :
-                    bkChosen.textContent="کتاب مناسبی برای شما در دسترس نمی باشد";
+        (isRange) ? bookPrompt.textContent="کتاب ( " + bookName + " ) مناسب شما می باشد" :
+                    bookPrompt.textContent="کتاب مناسبی برای شما در دسترس نمی باشد";
     }
     else{
-        bkChosen.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+        bookPrompt.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
     }
 }
