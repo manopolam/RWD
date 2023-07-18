@@ -1,20 +1,21 @@
-## RWD
-Mobile First Design (RWD=Responsive Web Design)
 
-## History
+RWD=Responsive Web Design with js
 
-### v1 ==> Desktop First Design
+### History
+
+#### v1 ==> Desktop First Design
 
 problem: 
 
 * use fixed width and height that make a problem when the pages smaller than specific size.
 * more code for responsive at media query.
+* no JavaScript use.
 
-### v2 ==> Mobile First Design
+#### v2 ==> Mobile First Design
 
 ## Stable Version
 
-### v2.5 ==> Full Version with below option
+### v2.6 ==> Full Version with below option
 
 #### Feature :
 
