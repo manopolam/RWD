@@ -1,9 +1,9 @@
 "use strict";
-let destroy_chk = 0;
-let destroy_text = true; 
-let elem;
-let nElem;
-let elemText;
+let destroy_chk = 0; //checking the number of click on Destroy item of Navigation Menu.
+let destroy_text = true; //Change to False after click on Destroy item of Navigation Menu.
+let elem;   //Contain of All Element of main tag.
+let nElem;  //New Element add to HTML DOM after click on Destroy item of Navigation Menu.
+let elemText; //The Exist Element that modify it after click on Destroy item of Navigation Menu.
 
 function hamburger() {
     const x = document.getElementById("hamburger");    
@@ -23,7 +23,7 @@ function destroy(){
       return;        
     }
     else{
-      document.location.reload();
+      document.location.reload();  //Refresh Page
     }      
   }    
   elem = document.querySelector("main");
