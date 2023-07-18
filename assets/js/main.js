@@ -4,6 +4,7 @@ let destroy_text = true; //Change to False after click on Destroy item of Naviga
 let elem;   //Contain of All Element of main tag.
 let nElem;  //New Element add to HTML DOM after click on Destroy item of Navigation Menu.
 let elemText; //The Exist Element that modify it after click on Destroy item of Navigation Menu.
+let nParent; //Parent of New Element(nElem).
 
 function hamburger() {
     const x = document.getElementById("hamburger");    
