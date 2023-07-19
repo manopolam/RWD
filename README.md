@@ -15,7 +15,7 @@ problem:
 
 ## Stable Version
 
-### v2.6 ==> Full Version with below option
+### v2.7 ==> Full Version with below option
 
 #### Feature :
 
