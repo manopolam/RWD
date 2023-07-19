@@ -128,23 +128,32 @@ function bookSelect_ternary(){
     }
 }
 // ------------------------------ Exercise2 --------------------------------------
-const userInput = document.getElementById("userInput");
-const oddRange  = document.getElementById("oddRange");
 
-function isOdd(n){
+function isOdd(n){    
     return((n%2)==1)
 }
 
 function displayOddNumbers(){
-    while (!isOdd(userInput.value)){
+    const oddRange  = document.getElementById("oddRange");
+    const userInput = document.getElementById("userInput");             
+    oddRange.textContent = "";
+    if (!isOdd(userInput.value)){        
         oddRange.textContent = "You Must enter odd number, Please try again";
         userInput.value = "" ;
     }
-    for(let i=1;i<100;i++){
-        if(isOdd(i)){
-            if(userInput.value != i){
-                oddRange.textContent += i + " - ";
+    else if(userInput.value > 100){
+        oddRange.textContent = "Your valid range is between 0 to 100, Please try again";
+        userInput.value = "" ;
+    }
+    else{
+        for(let i=1;i<100;i++){
+            if(isOdd(i)){
+                if(userInput.value != i){
+                    oddRange.textContent += i + " - ";
+                }
             }
         }
     }
 }
+
+
