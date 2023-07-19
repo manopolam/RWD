@@ -15,9 +15,9 @@ problem:
 
 ## Stable Version
 
-### v2.7 ==> Full Version with below option
+### Release Notes :
 
-#### Release notes :
+#### v2.7(Wednesday, Tir 28, 1402)
 
 * "Home" page is about sample design for training html and css
 * "Destroy" is about the ability to add and search DOM elements by JavaScript
