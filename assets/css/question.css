@@ -8,7 +8,7 @@ body{
     flex-direction: column;
 }
 .hr-line{
-    width: 60%;
+    width: 80%;
     margin: auto;  
 }
 .question {    
@@ -16,7 +16,7 @@ body{
     font-size: 28px;
     cursor: pointer;
     padding: 30px 20px;
-    width: 60%;
+    width: 80%;
     border: none;
     outline: none;
     transition: 0.4s;
@@ -29,7 +29,7 @@ span{
     font-size: 28px; 
     line-height: 1.6;   
     margin: auto;        
-    width: 50%;     
+    width: 70%;     
     padding: 18px;    
     display: none;
     overflow: hidden;  
@@ -55,7 +55,7 @@ span{
     text-align: right;    
 }
 .exercise{
-    width: 60%;
+    width: 80%;
     margin: auto;    
     border: 1px solid black;
     box-sizing: border-box;
@@ -120,17 +120,19 @@ label{
     input{             
         width: 8%;                
     }
+    .question,.answer,label,.prompt,h1{
+        font-size: 20px;        
+    } 
+}
+
+@media screen and (max-width:700px) {  
     .question,.answer,label,.prompt{
         font-size: 16px;
     }
-    
-}
-
-@media screen and (max-width:420px) {
-    input{             
-        width: 8%;                
-    }    
-    .question,.answer,label,.prompt{
-        font-size: 12px;
-    }    
+    .question,.hr-line,.exercise{
+        width: 90%;
+    }
+    .answer{
+        width: 85%;
+    }       
 }
