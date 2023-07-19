@@ -17,11 +17,9 @@ problem:
 
 ### v2.7 ==> Full Version with below option
 
-#### Feature :
+#### Release notes :
 
 * "Home" page is about sample design for training html and css
 * "Destroy" is about the ability to add and search DOM elements by JavaScript
 * "Question" is about the question and answer that asked me by my dear teacher.
 * "Board" is sample JavaScript page that use setTimeout() function
- 
-in this version, I try to use multiple css on all pages.Also try to optimize class name.
