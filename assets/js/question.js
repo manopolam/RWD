@@ -93,3 +93,19 @@ function displayOddNumbers(){
         }
     }
 }
+
+// ------------------------------ Exercise3 --------------------------------------
+
+function parent(){    
+    const number1 = prompt("Enter First Number?");
+    return(number1 * child());
+    
+}
+function child(){
+    const number2 = prompt("Enter Second Number?");
+    return number2;
+}
+function parentMultiplication(){
+    const result  = document.getElementById("Multiplication");    
+    result.textContent = "The multiplication answer is equal to: " + parent();
+}
