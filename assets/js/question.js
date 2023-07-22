@@ -85,7 +85,7 @@ function displayOddNumbers() {
         userInput.value = "" ;
     } else {
         for (let i = 1; i < 100; i++) {
-            if (!isOdd(i) || userInput.value == i) continue;
+            if (!isOdd(i) || +(userInput.value) === i) continue;
             result.textContent += i + " - ";
         }
     }
