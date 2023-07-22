@@ -19,32 +19,30 @@ function load(){
 
 // ------------------------------ Exercise1 --------------------------------------
 
-function bookSelect(){
+function bookSelect() {
     const ageInput = document.getElementById("ageInput");    
     const age = ageInput.value;
     const bookPrompt = document.getElementById("bookPrompt");
     let result="کتاب مناسب سن شما، یافت نشد";    
     let message;
-    if(+(age)){
-        if(age < 10){
-            result="شنگول و منگول";
-        }
-        else if(age >= 10 && age < 20){
-            result="چه کسی پنیر مرا دزدید";
-        }
-        else if(age >= 20 && age < 30){
-            result="باشگاه 5 صبح ";
-        }
-        else if(age >= 30 && age < 80){
-            result="معجزه سپاسگزاری";
-        }
-        (age > 80) ? message=result :
-        message=`برای سن ${age} سال ، کتاب ${result} مناسب می باشد`;
-        bookPrompt.textContent=message;     
-    }
-    else{
-        ageInput.value="";
-        bookPrompt.textContent="لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
+    if (+age) {
+      if (age < 10) {
+        result = "شنگول و منگول";
+      } else if (age >= 10 && age < 20) {
+        result = "چه کسی پنیر مرا دزدید";
+      } else if (age >= 20 && age < 30) {
+        result = "باشگاه 5 صبح ";
+      } else if (age >= 30 && age < 80) {
+        result = "معجزه سپاسگزاری";
+      }
+      age > 80
+        ? (message = result)
+        : (message = `برای سن ${age} سال ، کتاب ${result} مناسب می باشد`);
+      bookPrompt.textContent = message;
+    } else {
+      ageInput.value = "";
+      bookPrompt.textContent =
+        "لطفا سن خودتان را به عدد و بدون حروف وارد نمایید";
     }
 }
 
@@ -74,38 +72,36 @@ function isOdd(n){
     return(!!(n%2))
 }
 
-function displayOddNumbers(){
+function displayOddNumbers() {
     const result  = document.getElementById("resultOdd");
     const userInput = document.getElementById("userInput");             
     result.textContent = "";
-    if (!isOdd(userInput.value)){        
+    if (!isOdd(userInput.value)) {        
         result.textContent = "You Must enter odd number, Please try again";
         userInput.value = "" ;        
-    }
-    else if(userInput.value > 100){
-        result.textContent = "Your valid range is between 0 to 100, Please try again";
+    } else if(userInput.value > 100) {
+        result.textContent = 
+            "Your valid range is between 0 to 100, Please try again";
         userInput.value = "" ;
-    }
-    else{
-        for(let i=1;i<100;i++){
-            if(!isOdd(i) || userInput.value == i) continue;            
-            result.textContent += i + " - ";            
+    } else {
+        for (let i = 1; i < 100; i++) {
+            if (!isOdd(i) || userInput.value == i) continue;
+            result.textContent += i + " - ";
         }
     }
 }
 
 // ------------------------------ Exercise3 --------------------------------------
 
-function parent(){    
+function parent() {
     const number1 = prompt("Enter First Number?");
-    return(number1 * child());
-    
+    return number1 * child();
 }
-function child(){
+function child() {
     const number2 = prompt("Enter Second Number?");
     return number2;
 }
-function parentMultiplication(){
-    const result  = document.getElementById("Multiplication");    
+function parentMultiplication() {
+    const result = document.getElementById("Multiplication");
     result.textContent = "The multiplication answer is equal to: " + parent();
 }
