@@ -51,11 +51,7 @@ function logConsole(){
     console.log("document.querySelector('h2').innerHTML = 'Change by console';");
     console.groupEnd("Change and find HTML Elements");
 }
-function logVariables(){
-    const result=document.getElementById("result");
-    result.textContent = "";
-    const result2=document.getElementById("result2");
-    result2.textContent = "";
+function logVariables(){    
     console.clear();
     console.groupCollapsed("Log Variables");
     console.log("go to next line with Shift+Enter");
@@ -89,4 +85,6 @@ function logVariables(){
     console.warn("console.timeEnd();");
     console.timeEnd();
     console.groupEnd("Time");
+    const result=document.getElementById("result");
+    result.textContent = "";
 }
