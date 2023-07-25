@@ -20,13 +20,15 @@ function createLi(){
     performance.measure("Create 10000 Li","Li-Begin","Li-End");
 }
 function calculate(){
-    const resul=document.getElementById("result");
-    resul.textContent = "Open Performance Panel and see the Timings(Performance Mark 'For Loop')";
-    let result=0;
+    const result=document.getElementById("result");
+    result.textContent = "Open Performance Panel and see the Timings(Performance Mark 'For Loop')";
+    const result2=document.getElementById("result2");
+    result2.textContent = "";
+    let temp=0;
     performance.mark("For-Begin");
     for(let i=0;i<10000000;i++){
-        result +=i*10000;        
-        result -=i;
+        temp +=i*10000;        
+        temp -=i;
     }
     console.warn(result);
     performance.mark("For-End");
@@ -51,6 +53,8 @@ function logConsole(){
     console.groupEnd("Change and find HTML Elements");
 }
 function logVariables(){
+    const result2=document.getElementById("result2");
+    result2.textContent = "";
     console.clear();
     console.groupCollapsed("Log Variables");
     console.log("go to next line with Shift+Enter");
