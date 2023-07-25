@@ -52,6 +52,8 @@ function logConsole(){
     console.groupEnd("Change and find HTML Elements");
 }
 function logVariables(){
+    const result=document.getElementById("result");
+    result.textContent = "";
     const result2=document.getElementById("result2");
     result2.textContent = "";
     console.clear();
