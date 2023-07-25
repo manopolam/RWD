@@ -19,4 +19,6 @@ problem:
 #### v2.7(Wednesday, Tir 28, 1402)
 #### v2.8(Wednesday, Tir 28, 1402)
 * improve exercise 1 and 2 to Best practice
-
+#### v2.9(Tuesday, Mordad 3, 1402)
+* add exercise 3
+* add DevTools Tips from link from Question.html
