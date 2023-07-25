@@ -29,8 +29,7 @@ function calculate(){
     for(let i=0;i<10000000;i++){
         temp +=i*10000;        
         temp -=i;
-    }
-    console.warn(result);
+    }    
     performance.mark("For-End");
     performance.measure("For Loop","For-Begin","For-End");
 }
