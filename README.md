@@ -22,3 +22,5 @@ problem:
 #### v2.9(Tuesday, Mordad 3, 1402)
 * add exercise 3
 * add DevTools Tips from link from Question.html
+#### v2.9.1(Saturday, Mordad 7, 1402)
+* change exercise 3 to use Higher Order Function
