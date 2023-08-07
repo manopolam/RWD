@@ -24,3 +24,8 @@ problem:
 * add DevTools Tips from link from Question.html
 #### v2.9.1(Saturday, Mordad 7, 1402)
 * change exercise 3 to use Higher Order Function
+#### v3.0(Monday, Mordad 16, 1402)
+* add new page javascriptClass.html
+* add new js file javascriptClassSession3.js
+* from now to the end of the class, i do the exercise at javascriptClass.html.
+* and create new js file for each session
