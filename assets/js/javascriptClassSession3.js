@@ -113,15 +113,15 @@ console.groupEnd("Show a 2D Array");
 
 //Calculate the biggest number from 4 ways
 console.groupCollapsed("Biggest");
-console.log("Solution 1 :")
+console.warn("Solution 1 : ascending")
 array10.sort((a,b) => b-a);
 console.log(array10[0]);
-console.log("Solution 2 :")
+console.warn("Solution 2 : function")
 console.log(`The Biggest Number of array is = ${biggestNumberArray(array10)}`);
-console.log("Solution 3 :")
+console.warn("Solution 3 : descending")
 array10.sort((a,b) => a-b);
 console.log(array10[array10.length-1]);
-console.log("Solution 4 :")
+console.warn("Solution 4 : Math.max.apply")
 console.log(Math.max.apply(null,array10));
 console.groupEnd("Biggest");
 
