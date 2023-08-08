@@ -29,3 +29,6 @@ problem:
 * add new js file javascriptClassSession3.js
 * from now to the end of the class, i do the exercise at javascriptClass.html.
 * and create new js file for each session
+#### v3.3.1(Tuesday, Mordad 17, 1402)
+* from now to the end of my class, every version name have below rules:
+* v3.3.1 ==> means to (v.3)javascript (v.3.3)session3 and (v3.3.1)first edition.
