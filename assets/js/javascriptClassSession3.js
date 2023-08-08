@@ -1,5 +1,44 @@
 "use strict";
 
+// ---------------------------------------Object Exercise Begin-----------------------------------------
+// const user = {
+//     firstName : 'A',
+//     Sore : 100
+// };
+
+// const user2 = user; //Reference assignment
+
+// const user3 = {
+//     job : "programmer"
+// };
+
+// console.log('are equal', user2 == user , user2 === user );
+// console.log('user reference',user);
+// console.log('user2 string',JSON.parse(JSON.stringify(user2)));
+
+// user.lastName = 'B';
+// user.age = 25;
+// user2.age = 45;
+
+// const userAssign = Object.assign({},user);
+// const userAssign1 = Object.assign(user,user3);
+// const userAssign2 = Object.assign(user2,user3);
+// const userAssign3 = Object.assign({},user2,user3);
+// userAssign.lastName = 'D';
+
+// console.log('userAssign',userAssign);
+// console.log('userAssign1',userAssign1);
+// console.log('userAssign2',userAssign2);
+// console.log('userAssign3',userAssign3);
+// console.log('user reference',user);
+// console.log('user2 reference',user2);
+// console.log('user3 reference',user3);
+
+
+// ---------------------------------------Object Exercise End-----------------------------------------
+
+
+// ---------------------------------------Variable Declaration------------------------------------------
 const number = "121.1";
 
 const obj = {
@@ -128,14 +167,12 @@ console.log("Sum = " + sumDigits(number));
 console.groupEnd("Digits");
 
 console.groupCollapsed("multiplies");
-console.log("The input Object is = ");
-console.log(obj);
-console.log("Result after execute the multiplyNumeric(obj) function = ");
-console.log(multiplyNumeric(obj));
+console.log("The input Object is = ",obj);
+console.log("Result after execute the multiplyNumeric(obj) = ",multiplyNumeric(obj));
 console.groupEnd("multiplies");
 
 console.groupCollapsed("Show a 2D Array");
-console.log(array2D);
+console.log("The Source Array is = ",array2D);
 printArray(array2D);
 console.groupEnd("Show a 2D Array");
 
@@ -154,19 +191,19 @@ console.groupEnd("Biggest");
 
 console.groupCollapsed("Reverse");
 console.warn("Solution 1 : without change source Array")
-console.log(array10);
-console.log(reverseArray1(array10));
-console.log(array10);
+console.log("The array is = ",array10);
+console.log("The return value from the  reverseArray1()",reverseArray1(array10));
+console.log("After run the reverseArray1()",array10);
 console.warn("Solution 2 : exactly like array.reverse()")
-console.log(array10);
+console.log("The array is = ",array10);
 reverseArray2(array10);
-console.log(array10);
+console.log("After run the reverseArray2()",array10);
 console.groupEnd("Reverse");
 
 console.groupCollapsed("Repetition");
-console.log(array10);
+console.log("The array is = ",array10);
 // removeRepetitionArray1(array10,232);
 // removeRepetitionArray2(array10,232);
 removeRepetitionArray(array10,232);
-console.log(array10);
+console.log("After run the removeRepetitionArray()",array10);
 console.groupEnd("Repetition");
