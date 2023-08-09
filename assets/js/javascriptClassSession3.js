@@ -99,7 +99,7 @@ function printArray(array2D){
 
 // Find the biggest number of a array
 function biggestNumberArray(array){
-    let biggestNumber = 0;
+    let biggestNumber = array[0];
     for(let i of array){
         if(biggestNumber > i) continue ;
         biggestNumber = i;
