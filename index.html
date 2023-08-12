@@ -21,21 +21,16 @@
             <section>
                 <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
             </section>
-            <ul class="menu">
-                <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" onclick="hamburger()" alt="NavbarDropDownIcon"></li>
-                <li><a style="color:black;" class="link"  href="#">Home</a></li>
-                <li><a id="angryBtn1" class="link" href="#" onclick="destroy()">Destroy</a></li>
-                <li><a class="link"  href="question.html">Question</a></li>
-                <li><a class="link"  href="board.html">Board</a></li>
+            <ul id="menu" class="menu">
+                <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" onclick="hamburger()" alt="NavbarDropDownIcon"></li>                
+                <li><a id="angryBtn1" class="link" href="#" onclick="destroy()">Destroy</a></li>                
             </ul>
         </nav>
         <!-- Mobile Navigation -->
-        <ul class="menu" id="hamburger">
-            <li><a style="color:black;" class="mobile" href="#">Home</a></li>
-            <li><a id="angryBtn2"  class="mobile" href="#" onclick="destroy()">Destroy</a></li>
-            <li><a class="mobile" href="question.html">Question</a></li>
-            <li><a class="mobile" href="board.html">Board</a></li>
+        <ul class="menu" id="hamburger">            
+            <li><a id="angryBtn2"  class="mobile" href="#" onclick="destroy()">Destroy</a></li>            
         </ul>
+        <script src="assets/js/menu.js"></script>
         <!-- hero -->
         <article class="ctn">
             <img src="assets/img/PhotoHero.svg" alt="hero-photo">
