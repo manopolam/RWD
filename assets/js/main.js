@@ -6,14 +6,6 @@ let nElem;  //New Element add to HTML DOM after click on Destroy item of Navigat
 let elemText; //The Exist Element that modify it after click on Destroy item of Navigation Menu.
 let nParent; //Parent of New Element(nElem).
 
-function hamburger() {
-    const x = document.getElementById("hamburger");    
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-}
 function destroy(){   
   if(destroy_chk > 2){
     if(confirm('you want more?')){

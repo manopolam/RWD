@@ -4,7 +4,17 @@ const menuItem = [
   {id:"web" , href:"board.html" , text:"Board"},
   {id:"jsClass" , href:"devTools.html" , text:"DevTools"},
   {id:"jsClass" , href:"javascriptClass.html" , text:"jsClass"},  
+  {id:"jsClass" , href:"search.html" , text:"Search"},
 ]
+
+function hamburger() {
+  const x = document.getElementById("hamburger");    
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 function menu(menuItem,id){  
   let menuSelect = menuItem.filter(item => {
