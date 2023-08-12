@@ -123,6 +123,10 @@
     padding: 20px;
 }
 /*B****************** Navigation ******************B*/
+.menu{
+    list-style-type: none;
+    display: flex;    
+}
 .nav-ctn{
     display: flex;
     justify-content: space-between;    

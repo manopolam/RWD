@@ -21,22 +21,21 @@
             <section>
                 <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
             </section>
-            <section>
-                <img class="hamburger" src="assets/img/NavbarDropDownIcon.svg"
-                    onclick="hamburger()" alt="NavbarDropDownIcon">
-                <a style="color:black;" class="link"  href="#">Home</a>
-                <a id="angryBtn1" class="link" href="#" onclick="destroy()">Destroy</a>
-                <a class="link"  href="question.html">Question</a>
-                <a class="link"  href="board.html">Board</a>
-            </section>
+            <ul class="menu">
+                <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" onclick="hamburger()" alt="NavbarDropDownIcon"></li>
+                <li><a style="color:black;" class="link"  href="#">Home</a></li>
+                <li><a id="angryBtn1" class="link" href="#" onclick="destroy()">Destroy</a></li>
+                <li><a class="link"  href="question.html">Question</a></li>
+                <li><a class="link"  href="board.html">Board</a></li>
+            </ul>
         </nav>
         <!-- Mobile Navigation -->
-        <section id="hamburger">
-            <a style="color:black;" class="mobile" href="#">Home</a>
-            <a id="angryBtn2"  class="mobile" href="#" onclick="destroy()">Destroy</a>
-            <a class="mobile" href="question.html">Question</a>
-            <a class="mobile" href="board.html">Board</a>
-        </section>
+        <ul class="menu" id="hamburger">
+            <li><a style="color:black;" class="mobile" href="#">Home</a></li>
+            <li><a id="angryBtn2"  class="mobile" href="#" onclick="destroy()">Destroy</a></li>
+            <li><a class="mobile" href="question.html">Question</a></li>
+            <li><a class="mobile" href="board.html">Board</a></li>
+        </ul>
         <!-- hero -->
         <article class="ctn">
             <img src="assets/img/PhotoHero.svg" alt="hero-photo">

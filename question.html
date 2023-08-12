@@ -20,20 +20,19 @@
             <section>
                 <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
             </section>
-            <section>
-                <img class="hamburger" src="assets/img/NavbarDropDownIcon.svg"
-                    onclick="hamburger()" alt="NavbarDropDownIcon">
-                <a class="link" href="index.html">Home</a>                
-                <a style="color:black;" class="link" href="question.html">Question</a>
-                <a class="link" href="board.html">Board</a>
-            </section>
+            <ul class="menu">
+                <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" onclick="hamburger()" alt="NavbarDropDownIcon"></li>
+                <li><a class="link"  href="#">Home</a></li>                
+                <li><a class="link"  href="question.html">Question</a></li>
+                <li><a style="color:black;" class="link"  href="board.html">Board</a></li>
+            </ul>
         </nav>
         <!-- Mobile Navigation -->
-        <section id="hamburger">
-            <a class="mobile" href="index.html">Home</a>            
-            <a style="color:black;" class="mobile" href="question.html">Question</a>
-            <a class="mobile" href="board.html">Board</a>
-        </section>
+        <ul class="menu" id="hamburger">
+            <li><a class="mobile" href="#">Home</a></li>            
+            <li><a class="mobile" href="question.html">Question</a></li>
+            <li><a style="color:black;" class="mobile" href="board.html">Board</a></li>
+        </ul>
     </header>
     <main>        
         <section class="container">            
