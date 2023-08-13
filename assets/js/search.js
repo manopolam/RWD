@@ -48,48 +48,37 @@ function search() {
   }
 
   function sortPrice() {
-    if(isAscendingSort) isAscendingSort=false;
+    if (isAscendingSort) isAscendingSort=false; //ascending or descending order
     else isAscendingSort=true;    
 
-    let table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("list");
-    switching = true;
-    /*Make a loop that will continue until
-    no switching has been done:*/
-    while (switching) {
-      //start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /*Loop through all table rows (except the
-      first, which contains table headers):*/
-      for (i = 1; i < (rows.length - 1); i++) {
-        //start by saying there should be no switching:
-        shouldSwitch = false;
-        /*Get the two elements you want to compare,
-        one from current row and one from the next:*/
-        x = rows[i].getElementsByTagName("TD")[4];
-        y = rows[i + 1].getElementsByTagName("TD")[4];
-        //check if the two rows should switch place:
-        if(isAscendingSort){    
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                //if so, mark as a switch and break the loop:
-                shouldSwitch = true;            
-                break;
+    let rows,i;
+    let isSwapping, isSwapPlaces;
+    let price1,price2;
+    const table = document.getElementById("list");
+    isSwapping = true;    
+    while (isSwapping) {       
+      isSwapping = false;
+      rows = table.rows;      
+      for (i = 1; i < (rows.length - 1); i++) { // i=1 to except the table headers        
+        isSwapPlaces = false;        
+        price1 = rows[i].getElementsByTagName("td")[4];
+        price2 = rows[i + 1].getElementsByTagName("td")[4];        
+        if(isAscendingSort){
+            if (price1.innerHTML.toLowerCase() > price2.innerHTML.toLowerCase()) {                
+                isSwapPlaces = true;
+                break; // break for loop to swapping price1 and price2                       
             }
         }
         else {
-            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                //if so, mark as a switch and break the loop:
-                shouldSwitch = true;            
-                break;
+            if (price1.innerHTML.toLowerCase() < price2.innerHTML.toLowerCase()) {                
+                isSwapPlaces = true;
+                break; // break for loop to swapping price1 and price2
             }        
         }
       }
-      if (shouldSwitch) {
-        /*If a switch has been marked, make the switch
-        and mark that a switch has been done:*/
+      if (isSwapPlaces) {        
         rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
+        isSwapping = true; 
       }
     }
   }
