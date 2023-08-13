@@ -28,23 +28,22 @@ function showCars(cars){
 }
 
 function search() {
-    const input = document.getElementById("searchbar").value;
-    const searchItem = input.toLowerCase();
-    const tableHeader = document.getElementById("tableHeader");     
-    const table = document.getElementById("list");    
-    let tableRow , tr;    
+    const searchItem = document.getElementById("searchbar").value.toLowerCase();    
+    const tableHeader = document.getElementById("tableHeader"); // keep Header of Table
+    const table = document.getElementById("list"); 
+    let tableRow , tr ;    
     
     for (let i = 0 ; i < table.rows.length ; i++) {
-        tableRow = table.rows[i].textContent.toLowerCase();                
-        tr = table.rows[i];
+        tableRow = table.rows[i].textContent.toLowerCase(); // The data of a table row            
+        tr = table.rows[i]; // tag of a table row
         if(!tableRow.includes(searchItem)){
-            tr.style.display = "none";            
+          tr.style.display = "none"; // hide a table row           
         } else if (searchItem.length === 0){
-            tr.style.display = "table-row";
+          tr.style.display = "table-row"; // show a table row when the search is empty
         } else {
-            tr.style.display = "table-row";
+          tr.style.display = "table-row"; // show a table row when it's match
         }
-    tableHeader.style.display = "table-row";
+    tableHeader.style.display = "table-row"; // keep Header of Table
     }
   }
 
