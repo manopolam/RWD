@@ -1,47 +1,28 @@
 "use strict";
 let isAscendingSort = true;
-const car = [
-    {company : "Toyota"  , model : "Corolla" , color : "Blue"   , capacity : "4" , price : "22000" , year : "2018" , gear : "Automatic" , fuel : "Gas"},
-    {company : "Benz"    , model : "S500"    , color : "Black"  , capacity : "4" , price : "35000" , year : "2023" , gear : "Automatic" , fuel : "Hybrid"},
-    {company : "Ford"    , model : "Mustang" , color : "Silver" , capacity : "2" , price : "45000" , year : "2002" , gear : "manual"    , fuel : "Gas"},
-    {company : "Ferrari" , model : "Enzo"    , color : "Yellow" , capacity : "2" , price : "80000" , year : "2011" , gear : "Automatic" , fuel : "Gas"},
-    {company : "Fiat"    , model : "Panda"   , color : "White"  , capacity : "2" , price : "12000" , year : "2016" , gear : "Automatic" , fuel : "Gas"},
-    {company : "BMW"     , model : "X4"      , color : "Black"  , capacity : "4" , price : "32000" , year : "2013" , gear : "Automatic" , fuel : "Gas"},
-    {company : "Ford"    , model : "Shelby"  , color : "Red"    , capacity : "2" , price : "57000" , year : "1970" , gear : "Automatic" , fuel : "Gas"},
-    {company : "Honda"   , model : "Civic"   , color : "White"  , capacity : "4" , price : "27000" , year : "2022" , gear : "Automatic" , fuel : "Gas"},
-    {company : "BMW"     , model : "X6"      , color : "Black"  , capacity : "6" , price : "33000" , year : "2016" , gear : "Automatic" , fuel : "Gas"},
-    {company : "Honda"   , model : "Civic"   , color : "White"  , capacity : "4" , price : "27000" , year : "2022" , gear : "Automatic" , fuel : "Gas"},
-    {company : "BMW"     , model : "760Li"   , color : "Black"  , capacity : "4" , price : "41000" , year : "2023" , gear : "Automatic" , fuel : "Hybrid"},
+const cars = [
+    {company : "Toyota"  , model : "Corolla" , color : "Blue"   , capacity : "4" , price : "22000$" , year : "2018" , gear : "Automatic" , fuel : "Gas"},
+    {company : "Benz"    , model : "S500"    , color : "Black"  , capacity : "4" , price : "35000$" , year : "2023" , gear : "Automatic" , fuel : "Hybrid"},
+    {company : "Ford"    , model : "Mustang" , color : "Silver" , capacity : "2" , price : "45000$" , year : "2002" , gear : "manual"    , fuel : "Gas"},
+    {company : "Ferrari" , model : "Enzo"    , color : "Yellow" , capacity : "2" , price : "80000$" , year : "2011" , gear : "Automatic" , fuel : "Gas"},
+    {company : "Fiat"    , model : "Panda"   , color : "White"  , capacity : "2" , price : "12000$" , year : "2016" , gear : "Automatic" , fuel : "Gas"},
+    {company : "BMW"     , model : "X4"      , color : "Black"  , capacity : "4" , price : "32000$" , year : "2013" , gear : "Automatic" , fuel : "Gas"},
+    {company : "Ford"    , model : "Shelby"  , color : "Red"    , capacity : "2" , price : "57000$" , year : "1970" , gear : "Automatic" , fuel : "Gas"},    
+    {company : "BMW"     , model : "X6"      , color : "Black"  , capacity : "6" , price : "33000$" , year : "2016" , gear : "Automatic" , fuel : "Gas"},
+    {company : "Honda"   , model : "Civic"   , color : "White"  , capacity : "4" , price : "27000$" , year : "2022" , gear : "Automatic" , fuel : "Gas"},
+    {company : "BMW"     , model : "760Li"   , color : "Black"  , capacity : "4" , price : "41000$" , year : "2023" , gear : "Automatic" , fuel : "Hybrid"},
 ]
 
-function showCar(car){    
+function showCars(cars){    
   let listParent = document.getElementById("list");    
-  for (let index of car){    
-    const tr = document.createElement('tr');
-    const td1 = document.createElement('td');
-    const td2 = document.createElement('td');
-    const td3 = document.createElement('td');
-    const td4 = document.createElement('td');
-    const td5 = document.createElement('td');
-    const td6 = document.createElement('td');
-    const td7 = document.createElement('td');
-    const td8 = document.createElement('td'); 
-    td1.textContent = index.company;    
-    td2.textContent = index.model;    
-    td3.textContent = index.color;    
-    td4.textContent = index.capacity;    
-    td5.textContent = index.price + "$";    
-    td6.textContent = index.year;    
-    td7.textContent = index.gear;    
-    td8.textContent = index.fuel;    
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    tr.appendChild(td5);
-    tr.appendChild(td6);
-    tr.appendChild(td7);
-    tr.appendChild(td8);
+  let td , tr; // table tags
+  for (let car of cars){    
+    tr = document.createElement('tr');    
+    for(let property in car){
+      td = document.createElement('td');
+      td.textContent = car[property];
+      tr.appendChild(td);
+    }
     listParent.appendChild(tr);
   }
 }
@@ -114,4 +95,4 @@ function search() {
     }
   }
 
-  showCar(car);
+  showCars(cars);
