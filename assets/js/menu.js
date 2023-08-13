@@ -1,10 +1,12 @@
+"use strict";
+
 const menuItem = [
-  {id:"web" , href:"index.html" , text:"Home"},
-  {id:"web" , href:"question.html" , text:"Question"},
-  {id:"web" , href:"board.html" , text:"Board"},
-  {id:"jsClass" , href:"devTools.html" , text:"DevTools"},
+  {id:"web"     , href:"index.html"           , text:"Home"},
+  {id:"web"     , href:"question.html"        , text:"Question"},
+  {id:"web"     , href:"board.html"           , text:"Board"},
+  {id:"jsClass" , href:"devTools.html"        , text:"DevTools"},
   {id:"jsClass" , href:"javascriptClass.html" , text:"jsClass"},  
-  {id:"jsClass" , href:"search.html" , text:"Search"},
+  {id:"jsClass" , href:"search.html"          , text:"Search"},
 ]
 
 function hamburger() {
@@ -16,7 +18,7 @@ function hamburger() {
   }
 }
 
-function menu(menuItem,id){  
+function menuFilter(menuItem,id){  
   let menuSelect = menuItem.filter(item => {
             if(item.id === id) return item;
   });
@@ -42,5 +44,30 @@ function menu(menuItem,id){
   }  
 }
 
-// menu(menuItem,"web");
-menu(menuItem,"jsClass");
+function menuMap(menuItem){  
+  let menuSelect = menuItem.map(item => [item.href,item.text]);  
+  let menuParent = document.getElementById("menu");    
+  for (let link of menuSelect){        
+    const menuLi = document.createElement('li');
+    const menuA = document.createElement('a');
+    menuA.className='link';
+    menuA.setAttribute("href",link[0]);    
+    menuA.textContent = link[1];    
+    menuLi.appendChild(menuA);
+    menuParent.appendChild(menuLi);
+  }
+  menuParent = document.getElementById("hamburger");    
+  for (let link of menuSelect){    
+    const menuLi = document.createElement('li');
+    const menuA = document.createElement('a');
+    menuA.className='mobile';
+    menuA.setAttribute("href",link[0]);    
+    menuA.textContent = link[1];    
+    menuLi.appendChild(menuA);
+    menuParent.appendChild(menuLi);
+  }  
+}
+
+// menuFilter(menuItem,"web");
+// menuFilter(menuItem,"jsClass");
+menuMap(menuItem);

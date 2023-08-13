@@ -42,8 +42,15 @@ function sumDigitsByRegEx(number){
   return sum;
 }
 
+function printOddNumbers() {
+  let arrayNumber = [];
+  for(let i = 0; i < 100 ; i++) arrayNumber[i] = i;
+  let odd = arrayNumber.filter(value => (value%2));
+  return odd;
+}
 
 console.log(`countingDigits(${number}) = `,countingDigits(number));
 console.log(`sumDigits(${number}) = `,sumDigits(number));
 console.log(`countingDigitsByRegEx(${number}) = `,countingDigitsByRegEx(number));
 console.log(`sumDigitsByRegEx(${number}) = `,sumDigitsByRegEx(number));
+console.log("Odd Number = ",printOddNumbers());
