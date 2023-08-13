@@ -7,12 +7,11 @@
     <meta name="description" content="Responsive Startup Website">
     <meta name="author" content="Ahmad Mokhtari">
     <link rel="shortcut icon" href="assets/img/icon-logo.ico" type="image/x-icon">  
-    <title>Search</title>
-    <script src="assets/js/search.js"></script>    
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/question.css">      
+    <title>Search</title>    
+    <link rel="stylesheet" href="assets/css/main.css">    
+    <link rel="stylesheet" href="assets/css/search.css">    
 </head>
-<body onload="load()">
+<body>
   <header class="header">
       <!-- Navigation -->
       <nav class="nav-ctn">
@@ -20,7 +19,8 @@
               <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
           </section>
           <ul id="menu" class="menu">
-              <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" onclick="hamburger()" alt="NavbarDropDownIcon"></li>                
+              <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" 
+                onclick="hamburger()" alt="NavbarDropDownIcon"></li>                
           </ul>
       </nav>
       <!-- Mobile Navigation -->
@@ -28,8 +28,27 @@
       </ul>
   </header>
   <script src="assets/js/menu.js"></script>
-  <main> 
-
+  <main>
+    <section class="container">                  
+        <input id="searchbar" onkeyup="search()" type="text"
+        name="search" placeholder="Search...">
+        <br>
+        <a class="btn" onclick="sortPrice()">Price Sort</a>  
+        <br>
+        <table id='list'>        
+            <tr id="tableHeader">
+                <th>Company</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Capacity</th>
+                <th>Price</th>
+                <th>Year</th>
+                <th>Gear</th>
+                <th>Fuel</th>
+            </tr>            
+        </table>
+    </section>
   </main>
+  <script src="assets/js/search.js"></script>    
 </body>
 </html>
