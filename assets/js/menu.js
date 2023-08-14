@@ -7,6 +7,7 @@ const menuItem = [
   {id:"jsClass" , href:"devTools.html"        , text:"DevTools"},
   {id:"jsClass" , href:"javascriptClass.html" , text:"jsClass"},  
   {id:"jsClass" , href:"search.html"          , text:"Search"},
+  {id:"jsClass" , href:"regExp.html"          , text:"RegExp"},
 ]
 
 function hamburger() {

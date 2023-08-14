@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, Responsive">
+  <meta name="description" content="Responsive Startup Website">
+  <meta name="author" content="Ahmad Mokhtari">
+  <link rel="shortcut icon" href="assets/img/icon-logo.ico" type="image/x-icon">  
+  <title>Regular Expression</title>    
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/question.css"> 
+  <script src="assets/js/regExp.js"></script> 
+</head>
+<body>
+  <header class="header">
+    <!-- Navigation -->
+    <nav class="nav-ctn">
+        <section>
+            <img class="logo" src="assets/img/WebsiteLogo.svg" alt="Logo">
+        </section>
+        <ul id="menu" class="menu">
+            <li><img class="hamburger" src="assets/img/NavbarDropDownIcon.svg" 
+              onclick="hamburger()" alt="NavbarDropDownIcon"></li>                
+        </ul>
+    </nav>
+    <!-- Mobile Navigation -->
+    <ul class="menu" id="hamburger">
+    </ul>
+  </header>
+  <script src="assets/js/menu.js"></script>
+  <main>
+    <section class="exercise">
+      Regular Expression Syntax : <br><br>
+      <strong>/pattern/modifier(s)</strong><br><br>
+      Modifier i = Perform case-insensitive matching<br>
+      Modifier g = Perform a global match (find all matches 
+      rather than stopping after the first match)<br>
+      Modifier m = 	Perform multiline matching<br>
+      [] are used to find a range of characters:<br>
+      d = Find a digit<br>
+      D = Find a non-digit<br>
+      w = Find a word character<br>
+      W = Find a non-word character<br>
+      s = Find a whitespace character<br>
+      $ = Matches any string at the end of it<br>
+      ^ = Matches any string at the beginning of it<br>
+      + = Matches any string that contains at least one<br>
+      * = Matches any string that contains zero or more <br>
+      ? = Matches any string that contains zero or one<br>
+      . = matches any character, except newline or other line terminators.<br>
+
+    </section>
+    <section class="exercise">                      
+      <h1>Your password must have at least 8 characters, 
+        at least an upper case letter, an lowercase letter, 
+        a number and probably a symbol </h1>
+        <br>
+        <input class="input" id="passwordInput" onkeyup="checkPassword()" placeholder="Password">
+        <br>        
+        <p id="result1" class="prompt"></p>
+        <br>
+    </section>
+    <section class="exercise">
+      <h1>Email Format Checker</h1>
+      <br>
+      <input class="input" id="emailInput" onkeyup="checkEmail()" placeholder="E-mail Address">
+      <br>        
+      <p id="result2" class="prompt"></p>
+      <br>        
+    </section>
+    <section class="exercise">
+      <h1>Character Find and Replacement</h1>
+      <br>
+      <input class="input" id="characterInput" onkeyup="replaceCharacter()" placeholder="camelCaseString">
+      <br>        
+      <p id="result3" class="prompt"></p>
+      <br> 
+      <p id="result4" class="prompt"></p>
+      <br> 
+      <p id="result5" class="prompt"></p>
+      <br> 
+    </section>
+  </main>  
+</body>
+</html>
