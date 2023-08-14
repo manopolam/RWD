@@ -30,13 +30,13 @@ function sumDigits(number){
 }
 
 // Takes a number as input and returns the number of digits By regEx (Regular expression)
-function countingDigitsByRegEx(number){
-  return (String(number)).replace(/[^0-9]/g,"").length; // Remove anything but numbers  
+function countingDigitsByRegEx(number){  
+  return (String(number)).replace(/\D/g,"").length; // Remove anything but numbers  replace(/[^0-9]/g,"")
 }
 
 // Takes a number as input and returns the sum of digits By regEx (Regular expression)
 function sumDigitsByRegEx(number){
-  const num = (String(number)).replace(/[^0-9]/g,"");
+  const num = (String(number)).replace(/\D/g,"");  // replace(/[^0-9]/g,"")
   let sum = 0;
   for(let i of num) sum += +i;      
   return sum;
