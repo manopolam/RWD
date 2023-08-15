@@ -65,11 +65,12 @@ function truthy2(array){
 }
 
 // Take an array and return just truthy (not falsy)
+// array.reduce(function(total, currentValue), initialValue)
 function truthy3(array){    
-  return array.reduce((accumulator,current) => {    
-    if(current){
-      return[...accumulator,current];
-    } else {return accumulator;}
+  return array.reduce((total,currentValue) => {    
+    if(currentValue){
+      return[...total,currentValue]; // use spread(...) to returns a single value(an array)
+    } else {return total;}
   },[]);
 }
 
@@ -93,3 +94,50 @@ console.log("The Truthy1 Result is = ",truthy1(array));
 console.log("The Truthy2 Result is = ",truthy2(array));
 console.log("The Truthy3 Result is = ",truthy3(array));
 console.log("The Truthy4 Result is = ",truthy4(array));
+
+//--------------------------------- Call Apply Bind ------------------------------
+
+// With the call() and apply() method, write a method that can be used on different objects.
+// The Difference is 
+// The call()  method takes arguments separately.
+// The apply() method takes arguments as an array.
+const robert = {
+  name: "Robert Rocha",
+  age: 12,
+  height: "5,1",
+  sex: "male",
+  describe() {
+      return "This is me " + this.name + " " + this.age + " " + this.height + " " + this.sex;
+  },
+  address(city,country) {
+    return this.name + " Address : " + city + " , " + country ;
+  }  
+};
+const richard = {
+  name: "Richard Sash",
+  age: 25,
+  height: "6,4",
+  sex: "male",
+  print() {
+    console.log("My name is " + this.name);
+  }
+}
+console.log(robert.describe.call(richard ) );
+console.log(robert.describe.apply(richard ) );
+console.log(robert.address.call(richard,"Tehran","Iran"));
+console.log(robert.address.apply(richard,["Tehran","Iran"]));
+console.log(Math.max.apply(null, [1,2,3]));
+
+// With the bind() method, an object can borrow a method from another object.
+const describe = robert.describe.bind(richard);
+const address  = robert.address.bind(richard);
+console.log(describe());
+console.log(address("Tehran","Iran"));
+
+// the bind() method has to be used to prevent losing this.
+// When a function is used as a callback, this is lost.
+
+richard.print();
+setTimeout(richard.print,1000);
+const printBind = richard.print.bind(richard);
+setTimeout(printBind,2000);
