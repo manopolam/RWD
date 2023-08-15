@@ -42,15 +42,54 @@ function sumDigitsByRegEx(number){
   return sum;
 }
 
-function printOddNumbers() {
+// Print odd numbers
+function printOddNumbers(a,b) {
   let arrayNumber = [];
-  for(let i = 0; i < 100 ; i++) arrayNumber[i] = i;
+  for(let i = a; i < b ; i++) arrayNumber[i] = i;
   let odd = arrayNumber.filter(value => (value%2));
   return odd;
+}
+
+// Take an array and return just truthy (not falsy)
+function truthy1(array){    
+  return array.filter(value => value); 
+}
+
+// Take an array and return just truthy (not falsy)
+function truthy2(array){
+  let truthy = [];
+  for(let i of array){    
+     if(i) truthy.push(i);
+  }
+  return truthy;
+}
+
+// Take an array and return just truthy (not falsy)
+function truthy3(array){    
+  return array.reduce((accumulator,current) => {    
+    if(current){
+      return[...accumulator,current];
+    } else {return accumulator;}
+  },[]);
+}
+
+// Take an array and return just truthy (not falsy)
+function truthy4(array){
+  let truthy = [];
+  array.forEach(value => {
+    if(value) truthy.push(value);
+  });
+  return truthy;
 }
 
 console.log(`countingDigits(${number}) = `,countingDigits(number));
 console.log(`sumDigits(${number}) = `,sumDigits(number));
 console.log(`countingDigitsByRegEx(${number}) = `,countingDigitsByRegEx(number));
 console.log(`sumDigitsByRegEx(${number}) = `,sumDigitsByRegEx(number));
-console.log("Odd Number = ",printOddNumbers());
+console.log("Odd Number = ",printOddNumbers(1,100));
+const array = ['a',0,-0,0n,null,"",'',``,NaN,false,true,undefined,Infinity,"false","true","0","1",1];
+console.log("The Array Source is = ",array);
+console.log("The Truthy1 Result is = ",truthy1(array));
+console.log("The Truthy2 Result is = ",truthy2(array));
+console.log("The Truthy3 Result is = ",truthy3(array));
+console.log("The Truthy4 Result is = ",truthy4(array));
